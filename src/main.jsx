@@ -98,12 +98,8 @@ const Container = (props) => {
     <div className="container">
       {props.planets.map(planet => 
         <Planet
-          name={planet.name}
-          diameter={planet.diameter}
-          moons={planet.moons}
-          desc={planet.desc}
-          url={planet.url}
-          key={planet.id}
+        {...planet}
+        key={planet.id}
 
         />
       )}
